@@ -1,0 +1,64 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/images/lane.png" type="Texture" id=2]
+[ext_resource path="res://assets/images/border.png" type="Texture" id=3]
+[ext_resource path="res://scenes/entities/Letter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/ui/GameOver.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/game.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 65, 160 )
+
+[node name="Game" type="Node"]
+script = ExtResource( 7 )
+letter_scene = ExtResource( 4 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="TopBorder" type="Sprite" parent="Background"]
+position = Vector2( 3.05176e-05, 1.90735e-06 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="BottomBorder" type="Sprite" parent="Background"]
+position = Vector2( 3.05176e-05, 440 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+centered = false
+flip_v = true
+
+[node name="TrackTop" type="Sprite" parent="Background"]
+position = Vector2( 1.81899e-12, 170 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="TrackBottom" type="Sprite" parent="Background"]
+position = Vector2( 3.05176e-05, 300 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="SpawnTimer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 6.0
+
+[node name="Gameover" type="Area2D" parent="."]
+position = Vector2( 710, 80 )
+gravity_vec = Vector2( 0, 0 )
+gravity = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Gameover"]
+position = Vector2( 65, 160 )
+shape = SubResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 630, 190 )
+
+[node name="GameOver" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[connection signal="area_entered" from="Gameover" to="." method="_on_Gameover_area_entered"]
+[connection signal="incorrect_letter_entered" from="Player" to="." method="_on_Player_incorrect_letter_entered"]

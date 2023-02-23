@@ -1,2 +1,2 @@
-# nokia3310-jam-2023
-My attempt of game for Nokia 3310 Jam 5
+# NOKIA 3310 Jam 2023
+My attempt of game for [NOKIA 3301 JAM 5](https://itch.io/jam/nokiajam5)
