@@ -1,9 +1,3 @@
-; From nokia3310-jam-godot-starter
-; Under Apache 2.0 license
-; Copyright (c) SlothDevLlama 2021
-;
-; https://github.com/SlothDevLlama/nokia3310-jam-godot-starter/blob/master/default_bus_layout.tres
-
 [gd_resource type="AudioBusLayout" format=2]
 
 [resource]

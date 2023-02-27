@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/images/title.png" type="Texture" id=1]
+[ext_resource path="res://assets/styles/selected_style.tres" type="StyleBox" id=2]
+[ext_resource path="res://assets/fonts/nokia-fc.tres" type="DynamicFont" id=3]
+[ext_resource path="res://assets/styles/normal_style.tres" type="StyleBox" id=4]
+[ext_resource path="res://scenes/ui/main_menu.gd" type="Script" id=5]
+[ext_resource path="res://assets/sounds/intro.ogg" type="AudioStream" id=6]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -756.0
+margin_bottom = -432.0
+rect_scale = Vector2( 10, 10 )
+script = ExtResource( 5 )
+font_color_normal = Color( 0.262745, 0.321569, 0.239216, 1 )
+font_color_selected = Color( 0.780392, 0.941176, 0.847059, 1 )
+styles_normal = ExtResource( 4 )
+styles_selected = ExtResource( 2 )
+
+[node name="Cover" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -26.0
+margin_top = 1.0
+margin_right = 26.0
+margin_bottom = 24.0
+texture = ExtResource( 1 )
+
+[node name="PlayLabel" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 27.0
+margin_right = 82.0
+margin_bottom = 37.0
+custom_colors/font_color = Color( 0.780392, 0.941176, 0.847059, 1 )
+custom_constants/line_spacing = 0
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = ExtResource( 2 )
+text = "Play"
+
+[node name="OptionsLabel" type="Label" parent="."]
+margin_left = 2.0
+margin_top = 37.0
+margin_right = 82.0
+margin_bottom = 47.0
+custom_colors/font_color = Color( 0.262745, 0.321569, 0.239216, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+text = "Options"
+
+[node name="IntoAudioPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -24.0
+bus = "Sfx"

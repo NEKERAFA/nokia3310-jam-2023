@@ -11,4 +11,3 @@ data_*/
 # Export build ignores
 export/*
 !export/.gdignore
-

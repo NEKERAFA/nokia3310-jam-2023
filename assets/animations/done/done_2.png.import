@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/classic_dark.png-d6bcba075e11363d7f8556eeca53394e.stex"
+path="res://.import/done_2.png-8f6c20c561ca6c3de273f5445ee42a50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fonts/classic/classic_dark.png"
-dest_files=[ "res://.import/classic_dark.png-d6bcba075e11363d7f8556eeca53394e.stex" ]
+source_file="res://assets/animations/done/done_2.png"
+dest_files=[ "res://.import/done_2.png-8f6c20c561ca6c3de273f5445ee42a50.stex" ]
 
 [params]
 

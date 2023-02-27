@@ -5,13 +5,17 @@ class_name Letter
 const LETTERS = ["abcdef", "ghijklmno", "pqrstuvwxyz"]
 
 
-var updating = true
-var velocity_x = 4
-var delta_x = 0
+var _updating = true
+var _velocity_x = 4
+var _delta_x = 0
 
 
 func get_letter():
 	return $Label.text
+
+
+func set_velocity_x(velocity_x: int):
+	_velocity_x = velocity_x
 
 
 func _ready():
@@ -29,9 +33,8 @@ func _ready():
 
 
 func _process(delta):
-	if updating:
-		delta_x += velocity_x * delta
-		
-		if delta_x >= 1.0:
-			position.x += 10
-			delta_x = delta_x - 1.0
+	_delta_x += _velocity_x * delta
+	
+	if _delta_x >= 1.0:
+		position.x += 10
+		_delta_x = _delta_x - 1.0

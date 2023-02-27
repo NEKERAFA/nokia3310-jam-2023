@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/classic_light.png-71c12346ef45a4f538cb39e1ef9ec6bc.stex"
+path="res://.import/option_menu.png-adbd02a6a38e9da95a14487c131fe491.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fonts/classic/classic_light.png"
-dest_files=[ "res://.import/classic_light.png-71c12346ef45a4f538cb39e1ef9ec6bc.stex" ]
+source_file="res://assets/images/option_menu.png"
+dest_files=[ "res://.import/option_menu.png-adbd02a6a38e9da95a14487c131fe491.stex" ]
 
 [params]
 
